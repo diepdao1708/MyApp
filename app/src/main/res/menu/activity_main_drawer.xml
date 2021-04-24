@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/home"
+            android:title="Trang Chủ" />
+    </group>
+
+    <item android:title="Đề thi trắc nghiệm">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/monta"
+                    android:icon="@drawable/english"
+                    android:title="Môn Tiếng Anh" />
+                <item
+                    android:id="@+id/montoan"
+                    android:icon="@drawable/scale"
+                    android:title="Môn GDCD" />
+                <item
+                    android:id="@+id/monly"
+                    android:icon="@drawable/history"
+                    android:title="Môn Lịch Sử" />
+                <item
+                    android:id="@+id/monhoa"
+                    android:icon="@drawable/geography"
+                    android:title="Môn Địa Lý" />
+
+            </group>
+        </menu>
+    </item>
+
+</menu>
