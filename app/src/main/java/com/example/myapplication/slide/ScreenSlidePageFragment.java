@@ -78,7 +78,7 @@ public class ScreenSlidePageFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        tvNum.setText("Câu " + (mPageNumber + 1));
+        tvNum.setText("Câu " + (mPageNumber + 1) + "/" + (arr_Ques.size()) );
         tvQuestion.setText(arr_Ques.get(mPageNumber).getQuestion());
 
         radA.setText(arr_Ques.get(mPageNumber).getAns_a());

@@ -72,7 +72,7 @@ public class ScreenSlideActivity extends FragmentActivity {
         mPager.setPageTransformer(true, new DepthPageTransformer());
 
 
-        totalTimer = 5;
+        totalTimer = 2;
         timer = new CounterClass(totalTimer*60*1000, 1000);
 
 
@@ -97,12 +97,6 @@ public class ScreenSlideActivity extends FragmentActivity {
             @Override
             public void onClick(View v) {
                 checkAnswer();
-            }
-        });
-        tvTimer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
             }
         });
         tvXemDiem.setOnClickListener(new View.OnClickListener() {
@@ -130,6 +124,14 @@ public class ScreenSlideActivity extends FragmentActivity {
             // Otherwise, select the previous step.
             mPager.setCurrentItem(mPager.getCurrentItem() - 1);
         }
+    }
+
+    public void dialogTB(){
+        final AlertDialog.Builder builder=new AlertDialog.Builder(ScreenSlideActivity.this);
+        builder.setIcon(R.drawable.bell);
+        builder.setTitle("Thông báo");
+        builder.setMessage("Thời gian đã kết thúc!");
+        builder.show();
     }
 
     public void dialogExit(){
@@ -232,6 +234,8 @@ public class ScreenSlideActivity extends FragmentActivity {
         btnCancle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                timer.cancel();
+                finish();
                 dialog.dismiss();
             }
         });
@@ -282,6 +286,7 @@ public class ScreenSlideActivity extends FragmentActivity {
         @Override
         public void onFinish() {
             tvTimer.setText("00:00");  //SetText cho textview hiện thị thời gian.
+            dialogTB();
             //result();
         }
     }
