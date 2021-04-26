@@ -45,23 +45,7 @@ public class TestDoneActivity extends AppCompatActivity {
         btnExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final AlertDialog.Builder builder=new AlertDialog.Builder(TestDoneActivity.this);
-                builder.setIcon(R.drawable.exit);
-                builder.setTitle("Thông báo");
-                builder.setMessage("Bạn có muốn thoát hay không?");
-                builder.setPositiveButton("Có", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        finish();
-                    }
-                });
-                builder.setNegativeButton("Không", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                    }
-                });
-
-                builder.show();
+                finish();
             }
         }); // btnExit
 

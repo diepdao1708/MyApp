@@ -51,7 +51,7 @@ public class ScreenSlideActivity extends FragmentActivity {
 
 
 
-    TextView tvKiemtra, tvTimer, tvXemDiem;
+    TextView tvKiemtra, tvTimer, tvXemDiem, tvExit;
     public int checkAns=0;
     //CSDL
 
@@ -92,6 +92,14 @@ public class ScreenSlideActivity extends FragmentActivity {
         tvKiemtra = (TextView)findViewById(R.id.tvKiemTra);
         tvTimer = (TextView)findViewById(R.id.tvTimer);
         tvXemDiem = (TextView) findViewById(R.id.tvScore);
+        tvExit = (TextView) findViewById(R.id.tvExit);
+
+        tvExit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         tvKiemtra.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -143,7 +151,7 @@ public class ScreenSlideActivity extends FragmentActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 timer.cancel();
-                finish();
+
             }
         });
         builder.setNegativeButton("Không", new DialogInterface.OnClickListener() {
@@ -227,18 +235,10 @@ public class ScreenSlideActivity extends FragmentActivity {
                 dialog.dismiss();
             }
         });
-        Button btnCancle, btnFinish;
-        btnCancle=(Button) dialog.findViewById(R.id.btnCancle);
+        Button btnFinish;
         btnFinish=(Button) dialog.findViewById(R.id.btnFinish);
 
-        btnCancle.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                timer.cancel();
-                finish();
-                dialog.dismiss();
-            }
-        });
+
 
         btnFinish.setOnClickListener(new View.OnClickListener() {
             @Override

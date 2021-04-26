@@ -44,12 +44,13 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/txtNumQues"
-                android:layout_width="match_parent"
+                android:id="@+id/tvExit"
+                android:layout_width="176dp"
                 android:layout_height="match_parent"
                 android:gravity="center"
+                android:text="Thoát"
                 android:textColor="#ffffff"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -92,5 +93,12 @@
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/pager"
         android:layout_width="match_parent"
-        android:layout_height="fill_parent" />
+        android:layout_height="fill_parent" >
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+    </androidx.viewpager.widget.ViewPager>
 </LinearLayout>
