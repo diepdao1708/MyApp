@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -31,6 +32,7 @@ public class TestDoneActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_done);
         getSupportActionBar().setTitle("Kết Quả");
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#4580C2")));
         Intent intent = getIntent();
         arr_QuesBegin= (ArrayList<Question>) intent.getExtras().getSerializable("arr_Ques");
         begin();
@@ -40,7 +42,6 @@ public class TestDoneActivity extends AppCompatActivity {
         tvFalse.setText(""+numFalse);
         tvTrue.setText(""+numTrue);
         tvTotalScore.setText(""+totalScore);
-
 
         btnExit.setOnClickListener(new View.OnClickListener() {
             @Override

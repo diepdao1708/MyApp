@@ -97,7 +97,7 @@ public class ScreenSlideActivity extends FragmentActivity {
         tvExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                dialogExit();
             }
         });
 
@@ -151,7 +151,7 @@ public class ScreenSlideActivity extends FragmentActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 timer.cancel();
-
+                finish();
             }
         });
         builder.setNegativeButton("Không", new DialogInterface.OnClickListener() {

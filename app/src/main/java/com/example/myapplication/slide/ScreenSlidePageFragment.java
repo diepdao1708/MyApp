@@ -2,6 +2,7 @@ package com.example.myapplication.slide;
 
 
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -101,7 +102,6 @@ public class ScreenSlidePageFragment extends Fragment {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 choiceID = checkedId;
                 arr_Ques.get(mPageNumber).setTraloi(getChoiceFromID(choiceID));
-                //Toast.makeText(getActivity(),"Đây là đáp án "+ choiceID, Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -123,14 +123,18 @@ public class ScreenSlidePageFragment extends Fragment {
     //Hàm kiểm tra câu đúng, nếu câu đúng thì đổi màu background radiobutton tương ứng
     private void getCheckAns(String ans){
         if(ans.equals("A")==true){
-            radA.setBackgroundColor(Color.GREEN);
+            radA.setTextColor(Color.parseColor("#76ba1b"));
+            //radA.setBackgroundColor(Color.GREEN);
         }
         else if(ans.equals("B")==true){
-            radB.setBackgroundColor(Color.GREEN);
+            radB.setTextColor(Color.parseColor("#76ba1b"));
+            //radB.setBackgroundColor(Color.GREEN);
         }else if(ans.equals("C")==true){
-            radC.setBackgroundColor(Color.GREEN);
+            radC.setTextColor(Color.parseColor("#76ba1b"));
+            //radC.setBackgroundColor(Color.GREEN);
         }else if(ans.equals("D")==true){
-            radD.setBackgroundColor(Color.GREEN);
+            radD.setTextColor(Color.parseColor("#76ba1b"));
+            //radD.setBackgroundColor(Color.GREEN);
         }else ;
     }
 }

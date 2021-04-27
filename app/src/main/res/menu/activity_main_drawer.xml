@@ -21,12 +21,12 @@
                     android:title="Môn GDCD" />
                 <item
                     android:id="@+id/monly"
-                    android:icon="@drawable/history"
-                    android:title="Môn Lịch Sử" />
-                <item
-                    android:id="@+id/monhoa"
                     android:icon="@drawable/geography"
                     android:title="Môn Địa Lý" />
+                <item
+                    android:id="@+id/monhoa"
+                    android:icon="@drawable/history"
+                    android:title="Môn Lịch Sử" />
 
             </group>
         </menu>

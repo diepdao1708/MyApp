@@ -1,10 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_test_done"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".monhoc.TrangChuFragment">
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.example.myapplication.monhoc.TrangChuFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <TextView
+            android:layout_width="85dp"
+            android:layout_height="143dp"
+            android:layout_gravity="left"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="Chúc bạn học tập tốt!"
+            android:textColor="#4580C2"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/notification_background"
+            android:layout_width="163dp"
+            android:layout_height="143dp"
+            android:layout_weight="1"
+            android:src="@drawable/background" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:padding="15dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_weight="3"
+            android:gravity="left"
+            android:text="Luyện tập với các đề thi có sẵn trên hệ thống"
+            android:textColor="#4580C2"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/ic_launcher_background"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/imageTA"
+            android:backgroundTintMode="screen"
+            android:layout_width="199dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:src="@drawable/e" />
+
+        <ImageView
+            android:id="@+id/imageGDCD"
+            android:layout_width="199dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:src="@drawable/xh" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/ic_launcher_background"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/imageLS"
+            android:layout_width="199dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:src="@drawable/l" />
+
+        <ImageView
+            android:id="@+id/imageDL"
+            android:layout_width="199dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:src="@drawable/d" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/ic_launcher_background"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/imageT"
+            android:layout_width="199dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:src="@drawable/toan" />
+
+        <ImageView
+            android:id="@+id/imageTN"
+            android:layout_width="199dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:src="@drawable/tunhien" />
+    </LinearLayout>
+
+
+</LinearLayout>

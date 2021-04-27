@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fcfac1"
+    android:background="@color/white"
     android:orientation="vertical">
 
     <!-- TODO: Update blank fragment layout -->
@@ -27,27 +27,28 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:textSize="22sp"
-                    android:textColor="#ff0011"
-                    android:textStyle="bold"
-                    android:text="Câu 1" />
+                    android:text="Câu 1"
+                    android:textColor="#4580C2"
+                    android:textSize="20sp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tvQuestion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
-                    android:textColor="#000000"
-                    android:textStyle="italic"
-                    android:text="Câu hỏi thứ nhất " />
+                    android:textColor="#4580C2"
+                    android:textStyle="bold"
+                    android:paddingBottom="10dp"
+                    android:text="Câu hỏi thứ nhất" />
             </LinearLayout>
 
             <ImageView
                 android:id="@+id/ivIcon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="0dp"
-                android:padding="0dp"
                 android:layout_gravity="center"
                 android:visibility="visible" />
 
@@ -62,18 +63,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:checked="false"
-                    android:textSize="16sp"
-                    android:textColor="#1502c7"
-                    android:textStyle="bold"
-                    android:text="Trả lời 1" />
+                    android:text="Trả lời 1"
+                    android:textColor="#4580C2"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <RadioButton
                     android:id="@+id/radB"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:checked="false"
-                    android:textSize="16sp"
-                    android:textColor="#1502c7"
+                    android:textSize="18sp"
+                    android:textColor="#4580C2"
                     android:textStyle="bold"
                     android:text="Trả lời 2" />
 
@@ -82,8 +83,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:checked="false"
-                    android:textSize="16sp"
-                    android:textColor="#1502c7"
+                    android:textSize="18sp"
+                    android:textColor="#4580C2"
                     android:textStyle="bold"
                     android:text="Trả lời 3" />
 
@@ -92,8 +93,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:checked="false"
-                    android:textSize="16sp"
-                    android:textColor="#1502c7"
+                    android:textSize="18sp"
+                    android:textColor="#4580C2"
                     android:textStyle="bold"
                     android:text="Trả lời 4" />
             </RadioGroup>

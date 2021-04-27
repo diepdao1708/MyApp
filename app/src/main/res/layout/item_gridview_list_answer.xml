@@ -7,18 +7,20 @@
     <TextView
         android:text="Câu 1:"
         android:textSize="20dp"
-        android:textColor="@color/black"
+        android:textColor="#4580C2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         android:id="@+id/tvNumAns"
         android:layout_weight="1" />
 
     <TextView
         android:text="A"
         android:textSize="20dp"
-        android:textColor="#F10808"
+        android:textColor="#4580C2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tvAnswer"
+        android:textStyle="bold"
         android:layout_weight="1" />
 </LinearLayout>
