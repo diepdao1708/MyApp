@@ -17,16 +17,26 @@
                     android:title="Môn Tiếng Anh" />
                 <item
                     android:id="@+id/montoan"
-                    android:icon="@drawable/scale"
-                    android:title="Môn GDCD" />
+                    android:icon="@drawable/keys"
+                    android:title="Môn Toán" />
                 <item
-                    android:id="@+id/monly"
-                    android:icon="@drawable/geography"
-                    android:title="Môn Địa Lý" />
+                    android:id="@+id/monsinh"
+                    android:icon="@drawable/laboratory"
+                    android:title="Môn Sinh Học" />
                 <item
                     android:id="@+id/monhoa"
                     android:icon="@drawable/history"
                     android:title="Môn Lịch Sử" />
+                <item
+                    android:id="@+id/monly"
+                    android:icon="@drawable/geography"
+                    android:title="Môn Địa Lý" />
+
+                <item
+                    android:id="@+id/mongdcd"
+                    android:icon="@drawable/scale"
+                    android:title="Môn GDCD" />
+
 
             </group>
         </menu>

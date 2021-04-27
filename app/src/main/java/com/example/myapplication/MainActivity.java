@@ -8,7 +8,9 @@ import android.view.Menu;
 import android.widget.Toast;
 
 import com.example.myapplication.monhoc.DiaLyFragment;
+import com.example.myapplication.monhoc.GDCDFragment;
 import com.example.myapplication.monhoc.LichSuFragment;
+import com.example.myapplication.monhoc.SinhFragment;
 import com.example.myapplication.monhoc.TAFragment;
 import com.example.myapplication.monhoc.ToanHocFragment;
 import com.example.myapplication.monhoc.TrangChuFragment;
@@ -78,16 +80,23 @@ public class MainActivity extends AppCompatActivity {
                     ToanHocFragment toanHocFragment = new ToanHocFragment();
                     FragmentManager manager = getSupportFragmentManager();
                     manager.beginTransaction().replace(R.id.content_main, toanHocFragment, toanHocFragment.getTag()).commit();
-                } else if(id == R.id.monly){
+                } else if(id == R.id.monhoa){
                     LichSuFragment lichSuFragment = new LichSuFragment();
                     FragmentManager manager = getSupportFragmentManager();
                     manager.beginTransaction().replace(R.id.content_main, lichSuFragment, lichSuFragment.getTag()).commit();
 
-                } else if(id == R.id.monhoa){
+                } else if(id == R.id.monly){
                     DiaLyFragment diaLyFragment = new DiaLyFragment();
                     FragmentManager manager = getSupportFragmentManager();
                     manager.beginTransaction().replace(R.id.content_main, diaLyFragment, diaLyFragment.getTag()).commit();
-
+                } else if(id == R.id.monsinh){
+                    SinhFragment sinhFragment = new SinhFragment();
+                    FragmentManager manager = getSupportFragmentManager();
+                    manager.beginTransaction().replace(R.id.content_main, sinhFragment, sinhFragment.getTag()).commit();
+                } else if(id == R.id.mongdcd){
+                    GDCDFragment gdcdFragment = new GDCDFragment();
+                    FragmentManager manager = getSupportFragmentManager();
+                    manager.beginTransaction().replace(R.id.content_main, gdcdFragment, gdcdFragment.getTag()).commit();
                 }
                 DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
                 drawer.closeDrawer(GravityCompat.START);

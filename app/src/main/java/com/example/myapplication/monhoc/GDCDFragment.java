@@ -20,10 +20,10 @@ import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link LichSuFragment#newInstance} factory method to
+ * Use the {@link GDCDFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class LichSuFragment extends Fragment {
+public class GDCDFragment extends Fragment {
 
     ExamAdapter examAdapter;
     GridView gvExam;
@@ -38,7 +38,7 @@ public class LichSuFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public LichSuFragment() {
+    public GDCDFragment() {
         // Required empty public constructor
     }
 
@@ -48,11 +48,11 @@ public class LichSuFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment LichSuFragment.
+     * @return A new instance of fragment ToanHocFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static LichSuFragment newInstance(String param1, String param2) {
-        LichSuFragment fragment = new LichSuFragment();
+    public static GDCDFragment newInstance(String param1, String param2) {
+        GDCDFragment fragment = new GDCDFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -73,12 +73,13 @@ public class LichSuFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        ((MainActivity) getActivity()).getSupportActionBar().setTitle("Môn Lịch Sử");
-        return inflater.inflate(R.layout.fragment_lich_su, container, false);
+        ((MainActivity) getActivity()).getSupportActionBar().setTitle("Môn GDCD");
+        return inflater.inflate(R.layout.fragment_g_d_c_d, container, false);
     }
 
+
     @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+    public void onActivityCreated(@Nullable Bundle savedInstanceState){
         super.onActivityCreated(savedInstanceState);
         gvExam = (GridView) getActivity().findViewById(R.id.gvSubject);
         arr_exam.add(new Exam("Đề số 1"));
@@ -86,8 +87,19 @@ public class LichSuFragment extends Fragment {
         arr_exam.add(new Exam("Đề số 3"));
         arr_exam.add(new Exam("Đề số 4"));
         arr_exam.add(new Exam("Đề số 5"));
+
         examAdapter = new ExamAdapter(getActivity(), arr_exam);
         gvExam.setAdapter(examAdapter);
+
+        gvExam.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int i, long id) {
+                Intent intent = new Intent(getActivity(), ScreenSlideActivity.class);
+                intent.putExtra("num_exam", Integer.toString(i+1));
+                intent.putExtra("subject", "gdcd"); // gửi dữ liệu
+                startActivity(intent);
+            }
+        });
 
     }
 }

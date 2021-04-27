@@ -30,7 +30,7 @@ import com.example.myapplication.slide.ScreenSlideActivity;
 public class TrangChuFragment extends Fragment {
 
     GridView gvSubject;
-    ImageView tvTA, tvDL, tvGDCD, tvLS;
+    ImageView tvTA, tvDL, tvGDCD, tvLS, tvT, tvTN;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -94,12 +94,51 @@ public class TrangChuFragment extends Fragment {
             }
         });
 
+        tvGDCD = (ImageView) getActivity().findViewById(R.id.imageGDCD);
+        tvGDCD.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialogTB();
+            }
+        });
+
+        tvLS = (ImageView) getActivity().findViewById(R.id.imageLS);
+        tvLS.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialogTB();
+            }
+        });
+
+        tvDL = (ImageView) getActivity().findViewById(R.id.imageDL);
+        tvDL.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialogTB();
+            }
+        });
+
+        tvT = (ImageView) getActivity().findViewById(R.id.imageT);
+        tvT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialogTB();
+            }
+        });
+
+        tvTN = (ImageView) getActivity().findViewById(R.id.imageTN);
+        tvTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialogTB();
+            }
+        });
 
     }
     public void dialogTB(){
         final AlertDialog.Builder builder=new AlertDialog.Builder(getActivity());
-        builder.setTitle("\nTính năng này đang cập nhật");
-        builder.setMessage("");
+        builder.setTitle("Thông báo");
+        builder.setMessage("\nĐang phát triển tính năng này");
         builder.show();
     }
 

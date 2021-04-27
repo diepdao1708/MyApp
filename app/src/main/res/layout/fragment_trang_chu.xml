@@ -17,7 +17,7 @@
 
         <TextView
             android:layout_width="85dp"
-            android:layout_height="143dp"
+            android:layout_height="150dp"
             android:layout_gravity="left"
             android:layout_weight="3"
             android:gravity="center"
@@ -29,7 +29,7 @@
         <ImageView
             android:id="@+id/notification_background"
             android:layout_width="163dp"
-            android:layout_height="143dp"
+            android:layout_height="150dp"
             android:layout_weight="1"
             android:src="@drawable/background" />
 

@@ -1,6 +1,5 @@
 package com.example.myapplication.monhoc;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -9,21 +8,19 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.GridView;
 
 import com.example.myapplication.MainActivity;
 import com.example.myapplication.R;
-import com.example.myapplication.slide.ScreenSlideActivity;
 
 import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link LichSuFragment#newInstance} factory method to
+ * Use the {@link SinhFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class LichSuFragment extends Fragment {
+public class SinhFragment extends Fragment {
 
     ExamAdapter examAdapter;
     GridView gvExam;
@@ -38,7 +35,7 @@ public class LichSuFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public LichSuFragment() {
+    public SinhFragment() {
         // Required empty public constructor
     }
 
@@ -48,11 +45,11 @@ public class LichSuFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment LichSuFragment.
+     * @return A new instance of fragment DiaLyFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static LichSuFragment newInstance(String param1, String param2) {
-        LichSuFragment fragment = new LichSuFragment();
+    public static SinhFragment newInstance(String param1, String param2) {
+        SinhFragment fragment = new SinhFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -73,10 +70,9 @@ public class LichSuFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        ((MainActivity) getActivity()).getSupportActionBar().setTitle("Môn Lịch Sử");
-        return inflater.inflate(R.layout.fragment_lich_su, container, false);
+        ((MainActivity) getActivity()).getSupportActionBar().setTitle("Môn Sinh Học");
+        return inflater.inflate(R.layout.fragment_sinh, container, false);
     }
-
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);

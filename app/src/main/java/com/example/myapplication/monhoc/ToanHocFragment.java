@@ -50,7 +50,7 @@ public class ToanHocFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment ToanHocFragment.
+     * @return A new instance of fragment DiaLyFragment.
      */
     // TODO: Rename and change types and number of parameters
     public static ToanHocFragment newInstance(String param1, String param2) {
@@ -75,13 +75,11 @@ public class ToanHocFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        ((MainActivity) getActivity()).getSupportActionBar().setTitle("Môn GDCD");
+        ((MainActivity) getActivity()).getSupportActionBar().setTitle("Môn Toán");
         return inflater.inflate(R.layout.fragment_toan_hoc, container, false);
     }
-
-
     @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState){
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         gvExam = (GridView) getActivity().findViewById(R.id.gvSubject);
         arr_exam.add(new Exam("Đề số 1"));
@@ -89,19 +87,8 @@ public class ToanHocFragment extends Fragment {
         arr_exam.add(new Exam("Đề số 3"));
         arr_exam.add(new Exam("Đề số 4"));
         arr_exam.add(new Exam("Đề số 5"));
-
         examAdapter = new ExamAdapter(getActivity(), arr_exam);
         gvExam.setAdapter(examAdapter);
-
-        gvExam.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int i, long id) {
-                Intent intent = new Intent(getActivity(), ScreenSlideActivity.class);
-                intent.putExtra("num_exam", Integer.toString(i+1));
-                intent.putExtra("subject", "gdcd"); // gửi dữ liệu
-                startActivity(intent);
-            }
-        });
 
     }
 }
