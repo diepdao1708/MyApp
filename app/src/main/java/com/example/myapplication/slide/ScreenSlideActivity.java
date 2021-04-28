@@ -52,6 +52,7 @@ public class ScreenSlideActivity extends FragmentActivity {
 
 
     TextView tvKiemtra, tvTimer, tvXemDiem, tvExit;
+    Button btnNP;
     public int checkAns=0;
     //CSDL
 
@@ -93,6 +94,7 @@ public class ScreenSlideActivity extends FragmentActivity {
         tvTimer = (TextView)findViewById(R.id.tvTimer);
         tvXemDiem = (TextView) findViewById(R.id.tvScore);
         tvExit = (TextView) findViewById(R.id.tvExit);
+        btnNP = (Button) findViewById(R.id.btnNB);
 
         tvExit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -116,8 +118,15 @@ public class ScreenSlideActivity extends FragmentActivity {
                 startActivity(intent1);
             }
         });
-
+        btnNP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                timer.cancel();
+                result();
+            }
+        });
         timer.start();
+
     }
 
     public List<Question> getData() {
@@ -235,19 +244,27 @@ public class ScreenSlideActivity extends FragmentActivity {
                 dialog.dismiss();
             }
         });
-        Button btnFinish;
-        btnFinish=(Button) dialog.findViewById(R.id.btnFinish);
-
-
-
-        btnFinish.setOnClickListener(new View.OnClickListener() {
+        Button btnD;
+        btnD = (Button) dialog.findViewById(R.id.btnD);
+        btnD.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                timer.cancel();
-                result();
                 dialog.dismiss();
             }
         });
+//        Button btnFinish;
+//        btnFinish=(Button) dialog.findViewById(R.id.btnFinish);
+//
+//
+//
+//        btnFinish.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                timer.cancel();
+//                result();
+//                dialog.dismiss();
+//            }
+//        });
 
         dialog.show();
     }
@@ -287,6 +304,8 @@ public class ScreenSlideActivity extends FragmentActivity {
         public void onFinish() {
             tvTimer.setText("00:00");  //SetText cho textview hiện thị thời gian.
             dialogTB();
+            result();
+
             //result();
         }
     }

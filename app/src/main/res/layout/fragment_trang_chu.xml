@@ -63,7 +63,6 @@
 
         <ImageView
             android:id="@+id/imageTA"
-            android:backgroundTintMode="screen"
             android:layout_width="190dp"
             android:layout_height="115dp"
             android:layout_weight="1"

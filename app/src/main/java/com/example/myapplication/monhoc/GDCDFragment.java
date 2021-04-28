@@ -84,9 +84,6 @@ public class GDCDFragment extends Fragment {
         gvExam = (GridView) getActivity().findViewById(R.id.gvSubject);
         arr_exam.add(new Exam("Đề số 1"));
         arr_exam.add(new Exam("Đề số 2"));
-        arr_exam.add(new Exam("Đề số 3"));
-        arr_exam.add(new Exam("Đề số 4"));
-        arr_exam.add(new Exam("Đề số 5"));
 
         examAdapter = new ExamAdapter(getActivity(), arr_exam);
         gvExam.setAdapter(examAdapter);

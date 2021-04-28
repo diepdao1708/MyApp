@@ -25,14 +25,15 @@
             android:textSize="20dp" />
 
         <TextView
-            android:text=""
-            android:textSize="20dp"
-            android:textColor="@color/black"
+            android:id="@+id/tvTrue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/tvTrue"
-            android:textStyle="bold"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:text=""
+            android:gravity="left"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
@@ -45,6 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Câu sai:"
+
             android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="20dp" />
@@ -55,6 +57,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text=""
+            android:gravity="left"
             android:textColor="@color/black"
             android:textStyle="bold"
             android:textSize="20dp" />
@@ -81,6 +84,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/tvNotAns"
+            android:gravity="left"
             android:textStyle="bold"
             android:layout_weight="1" />
     </LinearLayout>
@@ -101,6 +105,7 @@
 
         <TextView
             android:text=""
+            android:gravity="left"
             android:textSize="20dp"
             android:textColor="@color/black"
             android:textStyle="bold"

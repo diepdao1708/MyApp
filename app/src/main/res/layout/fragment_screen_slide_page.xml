@@ -97,6 +97,8 @@
                     android:textColor="#4580C2"
                     android:textStyle="bold"
                     android:text="Trả lời 4" />
+
+                
             </RadioGroup>
         </LinearLayout>
     </ScrollView>

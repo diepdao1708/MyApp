@@ -93,12 +93,29 @@
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/pager"
         android:layout_width="match_parent"
-        android:layout_height="fill_parent" >
+        android:layout_height="610dp">
+
+    </androidx.viewpager.widget.ViewPager>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
 
         <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
+            android:id="@+id/btnNB"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
-    </androidx.viewpager.widget.ViewPager>
+            android:layout_weight="1"
+            android:backgroundTint="#4580C2"
+            android:text="Nộp Bài"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+
 </LinearLayout>

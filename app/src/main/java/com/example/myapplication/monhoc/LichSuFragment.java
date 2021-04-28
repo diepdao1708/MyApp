@@ -85,9 +85,17 @@ public class LichSuFragment extends Fragment {
         arr_exam.add(new Exam("Đề số 2"));
         arr_exam.add(new Exam("Đề số 3"));
         arr_exam.add(new Exam("Đề số 4"));
-        arr_exam.add(new Exam("Đề số 5"));
         examAdapter = new ExamAdapter(getActivity(), arr_exam);
         gvExam.setAdapter(examAdapter);
+        gvExam.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int i, long id) {
+                Intent intent = new Intent(getActivity(), ScreenSlideActivity.class);
+                intent.putExtra("num_exam", Integer.toString(i+1));
+                intent.putExtra("subject", "ls"); // gửi dữ liệu
+                startActivity(intent);
+            }
+        });
 
     }
 }
