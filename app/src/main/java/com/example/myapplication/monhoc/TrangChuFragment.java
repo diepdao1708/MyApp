@@ -21,6 +21,7 @@ import android.widget.Toast;
 import com.example.myapplication.MainActivity;
 import com.example.myapplication.R;
 import com.example.myapplication.slide.ScreenSlideActivity;
+import com.google.android.material.navigation.NavigationView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -90,7 +91,10 @@ public class TrangChuFragment extends Fragment {
         tvTA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dialogTB();
+                TAFragment taFragment = new TAFragment();
+                FragmentManager manager = getActivity().getSupportFragmentManager();
+                manager.beginTransaction().replace(R.id.content_main, taFragment, taFragment.getTag()).commit();
+                //dialogTB();
             }
         });
 
@@ -98,7 +102,10 @@ public class TrangChuFragment extends Fragment {
         tvGDCD.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dialogTB();
+                GDCDFragment gdcdFragment = new GDCDFragment();
+                FragmentManager manager = getActivity().getSupportFragmentManager();
+                manager.beginTransaction().replace(R.id.content_main, gdcdFragment, gdcdFragment.getTag()).commit();
+                //dialogTB();
             }
         });
 
@@ -106,7 +113,10 @@ public class TrangChuFragment extends Fragment {
         tvLS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dialogTB();
+                LichSuFragment lichSuFragment = new LichSuFragment();
+                FragmentManager manager = getActivity().getSupportFragmentManager();
+                manager.beginTransaction().replace(R.id.content_main, lichSuFragment, lichSuFragment.getTag()).commit();
+                //dialogTB();
             }
         });
 
@@ -114,7 +124,10 @@ public class TrangChuFragment extends Fragment {
         tvDL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dialogTB();
+                DiaLyFragment diaLyFragment = new DiaLyFragment();
+                FragmentManager manager = getActivity().getSupportFragmentManager();
+                manager.beginTransaction().replace(R.id.content_main, diaLyFragment, diaLyFragment.getTag()).commit();
+                //dialogTB();
             }
         });
 
@@ -122,7 +135,10 @@ public class TrangChuFragment extends Fragment {
         tvT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dialogTB();
+                ToanHocFragment toanHocFragment = new ToanHocFragment();
+                FragmentManager manager = getActivity().getSupportFragmentManager();
+                manager.beginTransaction().replace(R.id.content_main, toanHocFragment, toanHocFragment.getTag()).commit();
+                //dialogTB();
             }
         });
 
@@ -130,9 +146,13 @@ public class TrangChuFragment extends Fragment {
         tvTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dialogTB();
+                SinhFragment sinhFragment = new SinhFragment();
+                FragmentManager manager = getActivity().getSupportFragmentManager();
+                manager.beginTransaction().replace(R.id.content_main, sinhFragment, sinhFragment.getTag()).commit();
+                //dialogTB();
             }
         });
+
 
     }
     public void dialogTB(){

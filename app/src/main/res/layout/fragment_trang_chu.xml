@@ -21,9 +21,9 @@
             android:layout_gravity="left"
             android:layout_weight="3"
             android:gravity="center"
-            android:text="Chúc bạn học tập tốt!"
+            android:text="Welcome to my App"
             android:textColor="#4580C2"
-            android:textSize="20dp"
+            android:textSize="23dp"
             android:textStyle="bold" />
 
         <ImageView
@@ -46,9 +46,9 @@
             android:layout_gravity="left"
             android:layout_weight="3"
             android:gravity="left"
-            android:text="Luyện tập với các đề thi có sẵn trên hệ thống"
+            android:text=""
             android:textColor="#4580C2"
-            android:textSize="17dp"
+            android:textSize="14dp"
             android:textStyle="bold" />
 
 
@@ -64,65 +64,70 @@
         <ImageView
             android:id="@+id/imageTA"
             android:backgroundTintMode="screen"
-            android:layout_width="199dp"
-            android:layout_height="120dp"
+            android:layout_width="190dp"
+            android:layout_height="115dp"
             android:layout_weight="1"
             android:src="@drawable/e" />
 
         <ImageView
-            android:id="@+id/imageGDCD"
-            android:layout_width="199dp"
-            android:layout_height="120dp"
-            android:layout_weight="1"
-            android:src="@drawable/xh" />
-    </LinearLayout>
-
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@color/ic_launcher_background"
-        android:padding="10dp">
-
-        <ImageView
-            android:id="@+id/imageLS"
-            android:layout_width="199dp"
-            android:layout_height="120dp"
-            android:layout_weight="1"
-            android:src="@drawable/l" />
-
-        <ImageView
-            android:id="@+id/imageDL"
-            android:layout_width="199dp"
-            android:layout_height="120dp"
-            android:layout_weight="1"
-            android:src="@drawable/d" />
-    </LinearLayout>
-
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@color/ic_launcher_background"
-        android:padding="10dp">
-
-        <ImageView
             android:id="@+id/imageT"
-            android:layout_width="199dp"
-            android:layout_height="120dp"
+            android:layout_width="190dp"
+            android:layout_height="115dp"
             android:layout_weight="1"
             android:src="@drawable/toan" />
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/ic_launcher_background"
+        android:padding="10dp">
 
         <ImageView
             android:id="@+id/imageTN"
             android:layout_width="199dp"
-            android:layout_height="120dp"
+            android:layout_height="115dp"
             android:layout_weight="1"
             android:src="@drawable/tunhien" />
+
+        <ImageView
+            android:id="@+id/imageLS"
+            android:layout_width="190dp"
+            android:layout_height="115dp"
+            android:layout_weight="1"
+            android:src="@drawable/l" />
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/ic_launcher_background"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/imageDL"
+            android:layout_width="190dp"
+            android:layout_height="115dp"
+            android:layout_weight="1"
+            android:src="@drawable/d" />
+
+
+        <ImageView
+            android:id="@+id/imageGDCD"
+            android:layout_width="190dp"
+            android:layout_height="115dp"
+            android:layout_weight="1"
+            android:src="@drawable/xh" />
     </LinearLayout>
 
 

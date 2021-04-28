@@ -8,7 +8,7 @@
             android:title="Trang Chủ" />
     </group>
 
-    <item android:title="Đề thi trắc nghiệm">
+    <item android:title="Đề ôn luyện trắc nghiệm">
         <menu>
             <group android:checkableBehavior="single">
                 <item
