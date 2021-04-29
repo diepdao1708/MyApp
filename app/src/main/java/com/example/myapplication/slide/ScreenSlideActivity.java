@@ -52,7 +52,7 @@ public class ScreenSlideActivity extends FragmentActivity {
 
 
     TextView tvKiemtra, tvTimer, tvXemDiem, tvExit;
-    Button btnNP;
+    Button btnNB;
     public int checkAns=0;
     //CSDL
 
@@ -94,7 +94,7 @@ public class ScreenSlideActivity extends FragmentActivity {
         tvTimer = (TextView)findViewById(R.id.tvTimer);
         tvXemDiem = (TextView) findViewById(R.id.tvScore);
         tvExit = (TextView) findViewById(R.id.tvExit);
-        btnNP = (Button) findViewById(R.id.btnNB);
+        btnNB = (Button) findViewById(R.id.btnNB);
 
         tvExit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -118,11 +118,10 @@ public class ScreenSlideActivity extends FragmentActivity {
                 startActivity(intent1);
             }
         });
-        btnNP.setOnClickListener(new View.OnClickListener() {
+        btnNB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                timer.cancel();
-                result();
+                dialogNB();
             }
         });
         timer.start();
@@ -141,6 +140,7 @@ public class ScreenSlideActivity extends FragmentActivity {
             // Otherwise, select the previous step.
             mPager.setCurrentItem(mPager.getCurrentItem() - 1);
         }
+        
     }
 
     public void dialogTB(){
@@ -172,6 +172,26 @@ public class ScreenSlideActivity extends FragmentActivity {
         builder.show();
     }
 
+    public void dialogNB(){
+        final AlertDialog.Builder builder=new AlertDialog.Builder(ScreenSlideActivity.this);
+        //builder.setIcon(R.drawable.exit);
+        builder.setTitle("Thông báo");
+        builder.setMessage("Bạn có muốn nộp bài hay không?");
+        builder.setPositiveButton("Có", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                timer.cancel();
+                result();
+            }
+        });
+        builder.setNegativeButton("Không", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+            }
+        });
+
+        builder.show();
+    }
     /**
      * A simple pager adapter that represents 5 ScreenSlidePageFragment objects, in
      * sequence.
@@ -252,25 +272,14 @@ public class ScreenSlideActivity extends FragmentActivity {
                 dialog.dismiss();
             }
         });
-//        Button btnFinish;
-//        btnFinish=(Button) dialog.findViewById(R.id.btnFinish);
-//
-//
-//
-//        btnFinish.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                timer.cancel();
-//                result();
-//                dialog.dismiss();
-//            }
-//        });
+
 
         dialog.show();
     }
 
     public void result() {
         checkAns = 1;
+        //mPager.setCurrentItem(mPager.getCurrentItem());
         if (mPager.getCurrentItem() >= 4) mPager.setCurrentItem(mPager.getCurrentItem() - 4);
         else if (mPager.getCurrentItem() <= 4) mPager.setCurrentItem(mPager.getCurrentItem() + 4);
         tvXemDiem.setVisibility(View.VISIBLE);
