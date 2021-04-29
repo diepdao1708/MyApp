@@ -1,5 +1,6 @@
 package com.example.myapplication.monhoc;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -8,10 +9,12 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.GridView;
 
 import com.example.myapplication.MainActivity;
 import com.example.myapplication.R;
+import com.example.myapplication.slide.ScreenSlideActivity;
 
 import java.util.ArrayList;
 
@@ -78,12 +81,16 @@ public class DiaLyFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         gvExam = (GridView) getActivity().findViewById(R.id.gvSubject);
         arr_exam.add(new Exam("Đề số 1"));
-        arr_exam.add(new Exam("Đề số 2"));
-        arr_exam.add(new Exam("Đề số 3"));
-        arr_exam.add(new Exam("Đề số 4"));
-        arr_exam.add(new Exam("Đề số 5"));
         examAdapter = new ExamAdapter(getActivity(), arr_exam);
         gvExam.setAdapter(examAdapter);
-
+        gvExam.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int i, long id) {
+                Intent intent = new Intent(getActivity(), ScreenSlideActivity.class);
+                intent.putExtra("num_exam", Integer.toString(i+1));
+                intent.putExtra("subject", "dia"); // gửi dữ liệu
+                startActivity(intent);
+            }
+        });
     }
 }
