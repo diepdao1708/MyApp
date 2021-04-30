@@ -93,7 +93,7 @@
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/pager"
         android:layout_width="match_parent"
-        android:layout_height="610dp">
+        android:layout_height="620dp">
 
     </androidx.viewpager.widget.ViewPager>
 
@@ -102,7 +102,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:orientation="vertical"
-        android:paddingBottom="10dp">
+        android:paddingBottom="20dp">
 
         <Button
             android:id="@+id/btnNB"
